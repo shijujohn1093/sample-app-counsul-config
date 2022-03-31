@@ -27,6 +27,7 @@ https://docs.spring.io/spring-cloud-consul/docs/current/reference/html/#config-d
 * Need to check how to cache configuration do not reload from consul
 * How to make sure that latest config picked up form consul
 * Test various way of configuration
+* Environemnt specific configs from consul
 
 
 ## Property Samples
