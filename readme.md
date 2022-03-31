@@ -33,8 +33,8 @@ https://docs.spring.io/spring-cloud-consul/docs/current/reference/html/#config-d
 Following are the properties to be added in consul key/value:
 
 
-        	config/sample-app-counsul-config/user.username=shijujohn
-        	config/sample-app-counsul-config/password=password1234
+			config/sample-app-counsul-config/user.username=shijujohn
+			config/sample-app-counsul-config/password=password1234
 			config/sample-app-counsul-config/thirdname=shiju333
 			config/sample-app-counsul-config/fourthname=shiju444
 			config/sample-app-counsul-config/domain.kafka.consumer.[bootstrap.servers]=localhost:29092
