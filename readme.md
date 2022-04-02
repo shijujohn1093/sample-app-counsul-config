@@ -1,8 +1,11 @@
 ## spring-cloud-consul
-how to centralize configuration using spring cloud consul
-Download consul :  https://www.consul.io/downloads.html
-Commands:
-Check IP : ipconfig
+How to centralize configuration using spring cloud consul
+
+Download consul from  https://www.consul.io/downloads.html
+
+Commands to determine IP of your machine
+
+	ipconfig
 
 Run below command from same location where consul.exe is present. To bootstrap consul
 
@@ -13,10 +16,6 @@ Run below command from same location where consul.exe is present. To bootstrap c
 Open browser and you would be able to access consul via UI
 
 http://127.0.0.1:8500/
-
-## Manage consul keu value from command line 
-
-	consul kv --help
 
 ## Endoint to extract key from consul
  
@@ -38,7 +37,10 @@ https://docs.spring.io/spring-cloud-consul/docs/current/reference/html/#config-d
 * Test various way of configuration
 
 
+## Manage consul keu value from command line 
 
+	consul kv --help
+	
 ## Set key value on Harshicorp Consul
 Run below command from same location where consul.exe is present. It will add key/valaue 
 
