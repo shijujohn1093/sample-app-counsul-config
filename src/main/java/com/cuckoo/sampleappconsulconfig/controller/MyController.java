@@ -22,8 +22,20 @@ public class MyController {
 	@Autowired
 	private KafkaProperties kafkaProperties;
 
+	@Value("${firstname}")
+	private String firstName;
+	
+	@Value("${secondname}")
+	private String secondName;
+	
+	@Value("${thirdname}")
+	private String thirdName;
+	
 	@Value("${fourthname}")
 	private String fourthName;
+	
+	@Value("${fifthname}")
+	private String fifthName;
 
 	@Autowired
 	private Environment environment;
@@ -44,9 +56,9 @@ public class MyController {
 	}
 
 	// Third way of getting configuration
-	@GetMapping("/valconfigs")
+	@GetMapping("/names")
 	public String testOldWay() {
-		return fourthName;
+		return firstName+ " ~ " +secondName+ " ~ " +thirdName+ " ~ " +fourthName+ " ~ " +fifthName;
 	}
 
 	// Fourth way of getting configuration

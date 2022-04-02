@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: dev
   config:
     import: consul:localhost:8500
   cloud:
@@ -6,4 +8,4 @@ spring:
       host: localhost
       port: 8500
   application:
-    name: sample-app-counsul-config
+    name: sample-app-consul-config
