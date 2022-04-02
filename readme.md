@@ -37,7 +37,7 @@ https://docs.spring.io/spring-cloud-consul/docs/current/reference/html/#config-d
 * Test various way of configuration
 
 
-## Manage consul keu value from command line 
+## Manage consul key value from command line 
 
 	consul kv --help
 	
