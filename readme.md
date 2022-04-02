@@ -3,17 +3,26 @@ how to centralize configuration using spring cloud consul
 Download consul :  https://www.consul.io/downloads.html
 Commands:
 Check IP : ipconfig
-bootstrap consul : consul agent -server -bootstrap-expect=1 -data-dir=consul-data -ui -bind=YOUR_IP_ADDRESS
 
-consul agent -server -bootstrap-expect=1 -data-dir=consul-data -ui -bind=192.168.1.89
+Run below command from same location where consul.exe is present. To bootstrap consul
 
-Open browser
+	consul agent -server -bootstrap-expect=1 -data-dir=consul-data -ui -bind=YOUR_IP_ADDRESS
+
+	consul agent -server -bootstrap-expect=1 -data-dir=consul-data -ui -bind=192.168.1.89
+
+Open browser and you would be able to access consul via UI
 
 http://127.0.0.1:8500/
 
-## Get Key directly from Consul: 
-http://localhost:8500/v1/kv/config/sample-app-counsul-config/user.username
+## Manage consul keu value from command line 
 
+	consul kv --help
+
+## Endoint to extract key from consul
+ 
+http://localhost:8500/v1/kv/config/sample-app-consul-config/firstname
+
+*** TOO : Need to find out a way to extract environment specific parameter using rest end point
 
 ## Spring Cloud Documentation:
 
@@ -27,6 +36,7 @@ https://docs.spring.io/spring-cloud-consul/docs/current/reference/html/#config-d
 * Need to check how to cache configuration do not reload from consul
 * How to make sure that latest config picked up form consul
 * Test various way of configuration
+
 
 
 ## Set key value on Harshicorp Consul
