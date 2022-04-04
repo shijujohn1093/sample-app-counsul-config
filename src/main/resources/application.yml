@@ -9,3 +9,6 @@ spring:
       port: 8500
   application:
     name: sample-app-consul-config
+jasypt:
+  encryptor:
+    bean: encryptorBean

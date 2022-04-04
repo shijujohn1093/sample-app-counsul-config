@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cuckoo.sampleappconsulconfig.config.KafkaProperties;
 import com.cuckoo.sampleappconsulconfig.config.MyConfig;
+import com.cuckoo.sampleappconsulconfig.service.EncryptionService;
 
 @EnableConfigurationProperties(value = MyConfig.class)
 @RestController
@@ -24,6 +25,8 @@ public class MyController {
 
 	@Value("${firstname}")
 	private String firstName;
+	
+	
 	
 	@Value("${secondname}")
 	private String secondName;
@@ -39,6 +42,10 @@ public class MyController {
 
 	@Autowired
 	private Environment environment;
+	
+	
+	@Value("${my.decrypted.master.kunji}")
+	private String masterKey;
 	
 	
 	
@@ -71,5 +78,11 @@ public class MyController {
 	public Map<String, Object> getKafkaProducerConfiguration() {
 		return kafkaProperties.getProducer();
 	}
+	
+	@GetMapping("/testkey")
+	public String  testKey() {
+		return masterKey;
+	}
+
 
 }
