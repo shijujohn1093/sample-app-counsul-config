@@ -83,3 +83,10 @@ Note : Make sure spring.profile.active=dev in application property or passed as 
 ### Test your application, validate value of varibale picked from various places
 
 http://localhost:8080/names
+
+
+### Actuator endpoints
+
+http://localhost:8080/actuator/health
+
+http://localhost:8080/actuator/metrics

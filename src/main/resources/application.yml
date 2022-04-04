@@ -12,3 +12,17 @@ spring:
 jasypt:
   encryptor:
     bean: encryptorBean
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  health:
+    defaults:
+      enabled: true
+  info:
+    defaults:
+      enabled: true
+    git:
+      mode: full
